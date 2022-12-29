@@ -1,5 +1,4 @@
 .mxproject
-/Debug/*
 /check-cppcheck-build-dir/*
 /AppBootloader/*
 !/AppBootloader/*.elf

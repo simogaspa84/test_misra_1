@@ -1,0 +1,5 @@
+oldflash2hal.c:31:6:FLASH_Unlock	0	static
+oldflash2hal.c:36:6:FLASH_Lock	0	static
+oldflash2hal.c:41:14:FLASH_ErasePage	32	static
+oldflash2hal.c:57:14:FLASH_ProgramWord	8	static
+oldflash2hal.c:66:14:FLASH_ProgramHalfWord	8	static

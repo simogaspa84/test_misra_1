@@ -1,0 +1,5 @@
+analog.c:51:17:Adc2T	8	static
+analog.c:65:6:AnalogInit	0	static
+analog.c:73:6:AnalogManager	24	static
+analog.c:112:6:HAL_ADC_ConvCpltCallback	0	static
+analog.c:120:6:HAL_ADC_ErrorCallback	0	static

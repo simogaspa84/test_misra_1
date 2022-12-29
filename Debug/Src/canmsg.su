@@ -1,0 +1,13 @@
+canmsg.c:518:12:CanIdCheck	8	static
+canmsg.c:257:26:CnMsgFilterList	48	static
+canmsg.c:282:13:CanInit	64	static
+canmsg.c:457:13:CanSendCfgData	64	static
+canmsg.c:123:13:CanSpeedInit	8	static
+canmsg.c:210:13:CanReInit	0	static
+canmsg.c:792:6:CanMsgInit	16	static
+canmsg.c:813:6:CanMsgEnableForce	0	static
+canmsg.c:827:8:CanMsgManager	80	static
+canmsg.c:928:6:HAL_CAN_ErrorCallback	16	static
+canmsg.c:950:6:HAL_CAN_RxFifo0MsgPendingCallback	64	static
+canmsg.c:983:6:HAL_CAN_TxMailbox0CompleteCallback	0	static
+canmsg.c:998:6:HAL_CAN_TxMailbox0AbortCallback	0	static

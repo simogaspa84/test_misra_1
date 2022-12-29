@@ -1,0 +1,3 @@
+machine.c:98:13:Logic	8	static
+machine.c:217:6:MachineFault	8	static
+machine.c:184:6:MachineLogic	32	static
