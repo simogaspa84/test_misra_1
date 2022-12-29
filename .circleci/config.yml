@@ -7,6 +7,6 @@ jobs:
       - checkout
       - run:
           name: build
-          command: make
+          command: make -C Debug all
       - store_artifacts:
           path: build/
