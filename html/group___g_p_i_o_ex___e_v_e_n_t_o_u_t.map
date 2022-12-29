@@ -1,6 +1,0 @@
-<map id="EVENTOUT Cortex Configuration" name="EVENTOUT Cortex Configuration">
-<area shape="rect" id="node1" title="This section propose definition to use the Cortex EVENTOUT signal." alt="" coords="243,31,455,56"/>
-<area shape="rect" id="node2" href="$group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t.html" title=" " alt="" coords="503,5,621,31"/>
-<area shape="rect" id="node3" href="$group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n.html" title=" " alt="" coords="505,55,619,80"/>
-<area shape="rect" id="node4" href="$group___g_p_i_o_ex___exported___constants.html" title=" " alt="" coords="5,31,195,56"/>
-</map>

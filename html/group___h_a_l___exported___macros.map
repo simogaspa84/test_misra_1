@@ -1,7 +1,0 @@
-<map id="HAL Exported Macros" name="HAL Exported Macros">
-<area shape="rect" id="node1" href="$group___h_a_l___private___macros.html" title=" " alt="" coords="323,5,461,31"/>
-<area shape="rect" id="node2" href="$group___d_b_g_m_c_u___freeze___unfreeze.html" title="Freeze/Unfreeze Peripherals in Debug mode Note: On devices STM32F10xx8 and STM32F10xxB,..." alt="" coords="299,55,485,95"/>
-<area shape="rect" id="node3" href="$group___h_a_l.html" title="HAL module driver." alt="" coords="5,63,52,88"/>
-<area shape="rect" id="node4" title=" " alt="" coords="100,63,251,88"/>
-<area shape="rect" id="node5" href="$group___h_a_l___exported___functions.html" title=" " alt="" coords="307,120,477,145"/>
-</map>

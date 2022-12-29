@@ -1,7 +1,0 @@
-<map id="RCC_Private_Constants" name="RCC_Private_Constants">
-<area shape="rect" id="node1" href="$group___r_c_c___register___offset.html" title=" " alt="" coords="335,5,447,31"/>
-<area shape="rect" id="node2" href="$group___r_c_c___bit_address___alias_region.html" title="RCC registers bit address in the alias region." alt="" coords="312,55,471,80"/>
-<area shape="rect" id="node3" href="$group___r_c_c___timeout.html" title=" " alt="" coords="342,104,441,129"/>
-<area shape="rect" id="node4" title=" " alt="" coords="103,55,264,80"/>
-<area shape="rect" id="node5" href="$group___r_c_c.html" title="RCC HAL module driver." alt="" coords="5,55,55,80"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="GPIOEx Exported Constants" name="GPIOEx Exported Constants">
-<area shape="rect" id="node1" href="$group___g_p_i_o_ex___e_v_e_n_t_o_u_t.html" title="This section propose definition to use the Cortex EVENTOUT signal." alt="" coords="361,5,573,31"/>
-<area shape="rect" id="node2" href="$group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g.html" title="This section propose definition to remap the alternate function to some other port/pins." alt="" coords="403,55,531,95"/>
-<area shape="rect" id="node3" title=" " alt="" coords="124,35,313,60"/>
-<area shape="rect" id="node4" href="$group___g_p_i_o_ex.html" title="GPIO HAL module driver." alt="" coords="5,35,76,60"/>
-</map>
