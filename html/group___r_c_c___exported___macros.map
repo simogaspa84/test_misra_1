@@ -1,0 +1,21 @@
+<map id="RCC Exported Macros" name="RCC Exported Macros">
+<area shape="rect" id="node1" href="$group___r_c_c___l_s_i___configuration.html" title=" " alt="" coords="340,5,460,31"/>
+<area shape="rect" id="node2" href="$group___r_c_c___l_s_e___configuration.html" title=" " alt="" coords="337,55,463,80"/>
+<area shape="rect" id="node3" href="$group___r_c_c___r_t_c___clock___configuration.html" title=" " alt="" coords="303,104,497,129"/>
+<area shape="rect" id="node4" href="$group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status.html" title="Get the enable or disable status of the APB1 peripheral clock." alt="" coords="323,154,477,194"/>
+<area shape="rect" id="node5" title=" " alt="" coords="103,439,255,464"/>
+<area shape="rect" id="node6" href="$group___r_c_c___a_p_b1___force___release___reset.html" title="Force or release APB1 peripheral reset." alt="" coords="328,218,472,258"/>
+<area shape="rect" id="node7" href="$group___r_c_c___get___clock__source.html" title=" " alt="" coords="339,283,461,308"/>
+<area shape="rect" id="node8" href="$group___r_c_c___a_p_b1___clock___enable___disable.html" title="Enable or disable the Low Speed APB (APB1) peripheral clock." alt="" coords="308,332,492,357"/>
+<area shape="rect" id="node9" href="$group___r_c_c___a_p_b2___clock___enable___disable.html" title="Enable or disable the High Speed APB (APB2) peripheral clock." alt="" coords="308,381,492,407"/>
+<area shape="rect" id="node10" href="$group___r_c_c___a_p_b2___force___release___reset.html" title="Force or release APB2 peripheral reset." alt="" coords="328,431,472,471"/>
+<area shape="rect" id="node11" href="$group___r_c_c___h_s_i___configuration.html" title=" " alt="" coords="339,496,461,521"/>
+<area shape="rect" id="node12" href="$group___r_c_c___p_l_l___configuration.html" title=" " alt="" coords="338,545,462,571"/>
+<area shape="rect" id="node13" href="$group___r_c_c___h_s_e___configuration.html" title=" " alt="" coords="336,595,464,620"/>
+<area shape="rect" id="node14" href="$group___r_c_c___a_h_b___peripheral___clock___enable___disable___status.html" title="Get the enable or disable status of the AHB peripheral clock." alt="" coords="323,645,477,685"/>
+<area shape="rect" id="node15" href="$group___r_c_c_ex___m_c_ox___clock___config.html" title=" " alt="" coords="307,709,493,749"/>
+<area shape="rect" id="node16" href="$group___r_c_c___peripheral___clock___enable___disable.html" title="Enable or disable the AHB1 peripheral clock." alt="" coords="319,773,481,813"/>
+<area shape="rect" id="node17" href="$group___r_c_c___flags___interrupts___management.html" title="macros to manage the specified RCC Flags and interrupts." alt="" coords="305,837,495,863"/>
+<area shape="rect" id="node19" href="$group___r_c_c___a_p_b2___peripheral___clock___enable___disable___status.html" title="Get the enable or disable status of the APB2 peripheral clock." alt="" coords="323,887,477,927"/>
+<area shape="rect" id="node18" href="$group___r_c_c.html" title="RCC HAL module driver." alt="" coords="5,439,55,464"/>
+</map>

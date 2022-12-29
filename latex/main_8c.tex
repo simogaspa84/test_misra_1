@@ -1,0 +1,162 @@
+\hypertarget{main_8c}{}\doxysection{Src/main.c File Reference}
+\label{main_8c}\index{Src/main.c@{Src/main.c}}
+
+
+\+: Main program body  
+
+
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}machine.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}version.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}app\+\_\+btl.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em System Clock Configuration. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___a_d_c___exported___types_ga46483fcdb7a528252920c304ec59d006}{ADC\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_a22b804736f5648d52f639b2647d4ed13}{hadc1}}
+\item 
+\mbox{\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{DMA\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_a1c126854bb1813d31ab4776b21dcc51f}{hdma\+\_\+adc1}}
+\item 
+CAN\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_ae21c10daa2f8cbd18a0e66bb28a19d2d}{hcan}}
+\item 
+\mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_ab7c63c1b0f65db92b6a4ea19edf957e1}{huart3}}
+\item 
+unsigned int \mbox{\hyperlink{main_8c_a9a518b2ce6996f55372869d7dac2b3e9}{g\+\_\+pfn\+Vectors}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Main program body 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2022 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a1730ffe1e560465665eb47d9264826f9}\label{main_8c_a1730ffe1e560465665eb47d9264826f9}} 
+\index{main.c@{main.c}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 427 of file main.\+c.
+
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The application entry point. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 99 of file main.\+c.
+
+\mbox{\Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\label{main_8c_a70af21c671abfcc773614a9a4f63d920}} 
+\index{main.c@{main.c}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+System Clock Configuration. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Initializes the RCC Oscillators according to the specified parameters in the \mbox{\hyperlink{struct_r_c_c___osc_init_type_def}{RCC\+\_\+\+Osc\+Init\+Type\+Def}} structure.
+
+Initializes the CPU, AHB and APB buses clocks
+
+Definition at line 173 of file main.\+c.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8c_a9a518b2ce6996f55372869d7dac2b3e9}\label{main_8c_a9a518b2ce6996f55372869d7dac2b3e9}} 
+\index{main.c@{main.c}!g\_pfnVectors@{g\_pfnVectors}}
+\index{g\_pfnVectors@{g\_pfnVectors}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{g\_pfnVectors}{g\_pfnVectors}}
+{\footnotesize\ttfamily unsigned int g\+\_\+pfn\+Vectors\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{main_8c_a22b804736f5648d52f639b2647d4ed13}\label{main_8c_a22b804736f5648d52f639b2647d4ed13}} 
+\index{main.c@{main.c}!hadc1@{hadc1}}
+\index{hadc1@{hadc1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{hadc1}{hadc1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___a_d_c___exported___types_ga46483fcdb7a528252920c304ec59d006}{ADC\+\_\+\+Handle\+Type\+Def}} hadc1}
+
+
+
+Definition at line 45 of file main.\+c.
+
+\mbox{\Hypertarget{main_8c_ae21c10daa2f8cbd18a0e66bb28a19d2d}\label{main_8c_ae21c10daa2f8cbd18a0e66bb28a19d2d}} 
+\index{main.c@{main.c}!hcan@{hcan}}
+\index{hcan@{hcan}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{hcan}{hcan}}
+{\footnotesize\ttfamily CAN\+\_\+\+Handle\+Type\+Def hcan}
+
+
+
+Definition at line 48 of file main.\+c.
+
+\mbox{\Hypertarget{main_8c_a1c126854bb1813d31ab4776b21dcc51f}\label{main_8c_a1c126854bb1813d31ab4776b21dcc51f}} 
+\index{main.c@{main.c}!hdma\_adc1@{hdma\_adc1}}
+\index{hdma\_adc1@{hdma\_adc1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{hdma\_adc1}{hdma\_adc1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{DMA\+\_\+\+Handle\+Type\+Def}} hdma\+\_\+adc1}
+
+
+
+Definition at line 46 of file main.\+c.
+
+\mbox{\Hypertarget{main_8c_ab7c63c1b0f65db92b6a4ea19edf957e1}\label{main_8c_ab7c63c1b0f65db92b6a4ea19edf957e1}} 
+\index{main.c@{main.c}!huart3@{huart3}}
+\index{huart3@{huart3}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{huart3}{huart3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} huart3}
+
+
+
+Definition at line 50 of file main.\+c.
+

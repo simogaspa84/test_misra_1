@@ -1,0 +1,10 @@
+<map id="Inc/machine.h" name="Inc/machine.h">
+<area shape="rect" id="node1" title=" " alt="" coords="192,5,295,32"/>
+<area shape="rect" id="node2" href="$analog_8h.html" title=" " alt="" coords="69,80,161,107"/>
+<area shape="rect" id="node3" href="$analog_8c.html" title=" " alt="" coords="5,155,100,181"/>
+<area shape="rect" id="node4" href="$machine_8c.html" title=" " alt="" coords="125,155,231,181"/>
+<area shape="rect" id="node5" href="$canmsg_8h.html" title=" " alt="" coords="237,80,337,107"/>
+<area shape="rect" id="node7" href="$main_8c.html" title=": Main program body" alt="" coords="362,80,447,107"/>
+<area shape="rect" id="node8" href="$stm32f1xx__it_8c.html" title="Interrupt Service Routines." alt="" coords="471,80,602,107"/>
+<area shape="rect" id="node6" href="$canmsg_8c.html" title=" " alt="" coords="256,155,359,181"/>
+</map>

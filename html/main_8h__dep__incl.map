@@ -1,0 +1,12 @@
+<map id="Inc/main.h" name="Inc/main.h">
+<area shape="rect" id="node1" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="435,5,518,32"/>
+<area shape="rect" id="node2" href="$machine_8h.html" title=" " alt="" coords="308,80,411,107"/>
+<area shape="rect" id="node4" href="$analog_8c.html" title=" " alt="" coords="5,229,100,256"/>
+<area shape="rect" id="node5" href="$machine_8c.html" title=" " alt="" coords="155,229,262,256"/>
+<area shape="rect" id="node7" href="$canmsg_8c.html" title=" " alt="" coords="484,229,587,256"/>
+<area shape="rect" id="node8" href="$main_8c.html" title=": Main program body" alt="" coords="434,155,519,181"/>
+<area shape="rect" id="node9" href="$stm32f1xx__it_8c.html" title="Interrupt Service Routines." alt="" coords="543,155,674,181"/>
+<area shape="rect" id="node10" href="$stm32f1xx__hal__msp_8c.html" title="This file provides code for the MSP Initialization and de&#45;Initialization codes." alt="" coords="749,80,922,107"/>
+<area shape="rect" id="node3" href="$analog_8h.html" title=" " alt="" coords="141,155,233,181"/>
+<area shape="rect" id="node6" href="$canmsg_8h.html" title=" " alt="" coords="309,155,409,181"/>
+</map>

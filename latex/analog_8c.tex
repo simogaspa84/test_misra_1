@@ -1,0 +1,254 @@
+\hypertarget{analog_8c}{}\doxysection{Src/analog.c File Reference}
+\label{analog_8c}\index{Src/analog.c@{Src/analog.c}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}analog.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}machine.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}version.\+h\char`\"{}}\newline
+Include dependency graph for analog.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{analog_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{analog_8c_ad35a6ba47b3ea3d708b251c871bf3d50}{ADC\+\_\+\+NUM\+\_\+\+SCAN}}~3   /$\ast$ numero canali ADc $\ast$/
+\item 
+\#define \mbox{\hyperlink{analog_8c_a471c086a7d3797eb27c08f3359ff35aa}{ADC\+\_\+\+SAMPLES}}~20  /$\ast$ numero di campioni per singolo canale $\ast$/
+\item 
+\#define \mbox{\hyperlink{analog_8c_aaf55cb9d18b97364031f19ddca475dc2}{ADC\+\_\+\+DMA\+\_\+\+SAMPLES}}~(\mbox{\hyperlink{analog_8c_a471c086a7d3797eb27c08f3359ff35aa}{ADC\+\_\+\+SAMPLES}}$\ast$\mbox{\hyperlink{analog_8c_ad35a6ba47b3ea3d708b251c871bf3d50}{ADC\+\_\+\+NUM\+\_\+\+SCAN}})
+\item 
+\#define \mbox{\hyperlink{analog_8c_a78eed2be74476133baae3c235aebc75d}{ADC\+\_\+\+I\+\_\+\+OUT}}~0
+\item 
+\#define \mbox{\hyperlink{analog_8c_a6348a5f216f4f24005f332663ca69f0a}{ADC\+\_\+\+NTC\+\_\+A}}~1
+\item 
+\#define \mbox{\hyperlink{analog_8c_adea1811f87309b74b5dca8cca99377b6}{ADC\+\_\+\+NTC\+\_\+B}}~2
+\item 
+\#define \mbox{\hyperlink{analog_8c_a6c6cd23c50d4bb7c41bac5454026bdae}{NUMBER\+\_\+\+OF\+\_\+\+ANALOG\+\_\+\+INPUTS}}~3
+\item 
+\#define \mbox{\hyperlink{analog_8c_a1ab5ad0c3149a4d7badde84786128aee}{VCC\+\_\+\+ADC}}~3300 /$\ast$ mV $\ast$/
+\item 
+\#define \mbox{\hyperlink{analog_8c_a555a695bf58df062dc03f0e892d95cd7}{ADC\+\_\+\+MAX}}~4095
+\item 
+\#define \mbox{\hyperlink{analog_8c_a7e7a958c1f37754d83aeb300a30a4b41}{I\+\_\+\+OUT\+\_\+K}}~(float)16.\+5
+\item 
+\#define \mbox{\hyperlink{analog_8c_a8573afe95c21c513ecb619babc43a585}{R\+\_\+\+VALUE}}~2200
+\item 
+\#define \mbox{\hyperlink{analog_8c_a1a4ebeac22bba6b479c6d968e49ae884}{RTD\+\_\+B}}~3988
+\item 
+\#define \mbox{\hyperlink{analog_8c_a44377bac95544f0e9b9c28b1fa7ec229}{RTD\+\_\+\+R\+\_\+R}}~10000
+\item 
+\#define \mbox{\hyperlink{analog_8c_a5ff597b530e0bd471305a48681289ebc}{RTD\+\_\+\+T\+\_\+R}}~(double)298.\+15
+\item 
+\#define \mbox{\hyperlink{analog_8c_ac91e954471045fdbd9b3d01933373c1e}{K2C}}~(double)273.\+15
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{analog_8c_aff73cb1a0a6e4ace610aa6dcb6f517da}{Analog\+Init}} (void)
+\item 
+void \mbox{\hyperlink{analog_8c_a2eda3bed473556e313e75c9522aeebb2}{Analog\+Manager}} (\mbox{\hyperlink{structmachine__status}{machine\+\_\+status}} $\ast$machine)
+\item 
+void \mbox{\hyperlink{group___a_d_c___exported___functions___group2_gaf20a88180db1113be1e89266917d148b}{HAL\+\_\+\+ADC\+\_\+\+Conv\+Cplt\+Callback}} (\mbox{\hyperlink{group___a_d_c___exported___types_ga46483fcdb7a528252920c304ec59d006}{ADC\+\_\+\+Handle\+Type\+Def}} $\ast$hadc)
+\item 
+void \mbox{\hyperlink{group___a_d_c___exported___functions___group2_gadea1a55c5199d5cb4cfc1fdcd32be1b2}{HAL\+\_\+\+ADC\+\_\+\+Error\+Callback}} (\mbox{\hyperlink{group___a_d_c___exported___types_ga46483fcdb7a528252920c304ec59d006}{ADC\+\_\+\+Handle\+Type\+Def}} $\ast$hadc)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___a_d_c___exported___types_ga46483fcdb7a528252920c304ec59d006}{ADC\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{analog_8c_a22b804736f5648d52f639b2647d4ed13}{hadc1}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{analog_8c_aaf55cb9d18b97364031f19ddca475dc2}\label{analog_8c_aaf55cb9d18b97364031f19ddca475dc2}} 
+\index{analog.c@{analog.c}!ADC\_DMA\_SAMPLES@{ADC\_DMA\_SAMPLES}}
+\index{ADC\_DMA\_SAMPLES@{ADC\_DMA\_SAMPLES}!analog.c@{analog.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_DMA\_SAMPLES}{ADC\_DMA\_SAMPLES}}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+DMA\+\_\+\+SAMPLES~(\mbox{\hyperlink{analog_8c_a471c086a7d3797eb27c08f3359ff35aa}{ADC\+\_\+\+SAMPLES}}$\ast$\mbox{\hyperlink{analog_8c_ad35a6ba47b3ea3d708b251c871bf3d50}{ADC\+\_\+\+NUM\+\_\+\+SCAN}})}
+
+
+
+Definition at line 14 of file analog.\+c.
+
+\mbox{\Hypertarget{analog_8c_a78eed2be74476133baae3c235aebc75d}\label{analog_8c_a78eed2be74476133baae3c235aebc75d}} 
+\index{analog.c@{analog.c}!ADC\_I\_OUT@{ADC\_I\_OUT}}
+\index{ADC\_I\_OUT@{ADC\_I\_OUT}!analog.c@{analog.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_I\_OUT}{ADC\_I\_OUT}}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+I\+\_\+\+OUT~0}
+
+
+
+Definition at line 16 of file analog.\+c.
+
+\mbox{\Hypertarget{analog_8c_a555a695bf58df062dc03f0e892d95cd7}\label{analog_8c_a555a695bf58df062dc03f0e892d95cd7}} 
+\index{analog.c@{analog.c}!ADC\_MAX@{ADC\_MAX}}
+\index{ADC\_MAX@{ADC\_MAX}!analog.c@{analog.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_MAX}{ADC\_MAX}}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+MAX~4095}
+
+
+
+Definition at line 23 of file analog.\+c.
+
+\mbox{\Hypertarget{analog_8c_a6348a5f216f4f24005f332663ca69f0a}\label{analog_8c_a6348a5f216f4f24005f332663ca69f0a}} 
+\index{analog.c@{analog.c}!ADC\_NTC\_A@{ADC\_NTC\_A}}
+\index{ADC\_NTC\_A@{ADC\_NTC\_A}!analog.c@{analog.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_NTC\_A}{ADC\_NTC\_A}}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+NTC\+\_\+A~1}
+
+
+
+Definition at line 17 of file analog.\+c.
+
+\mbox{\Hypertarget{analog_8c_adea1811f87309b74b5dca8cca99377b6}\label{analog_8c_adea1811f87309b74b5dca8cca99377b6}} 
+\index{analog.c@{analog.c}!ADC\_NTC\_B@{ADC\_NTC\_B}}
+\index{ADC\_NTC\_B@{ADC\_NTC\_B}!analog.c@{analog.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_NTC\_B}{ADC\_NTC\_B}}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+NTC\+\_\+B~2}
+
+
+
+Definition at line 18 of file analog.\+c.
+
+\mbox{\Hypertarget{analog_8c_ad35a6ba47b3ea3d708b251c871bf3d50}\label{analog_8c_ad35a6ba47b3ea3d708b251c871bf3d50}} 
+\index{analog.c@{analog.c}!ADC\_NUM\_SCAN@{ADC\_NUM\_SCAN}}
+\index{ADC\_NUM\_SCAN@{ADC\_NUM\_SCAN}!analog.c@{analog.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_NUM\_SCAN}{ADC\_NUM\_SCAN}}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+NUM\+\_\+\+SCAN~3   /$\ast$ numero canali ADc $\ast$/}
+
+
+
+Definition at line 12 of file analog.\+c.
+
+\mbox{\Hypertarget{analog_8c_a471c086a7d3797eb27c08f3359ff35aa}\label{analog_8c_a471c086a7d3797eb27c08f3359ff35aa}} 
+\index{analog.c@{analog.c}!ADC\_SAMPLES@{ADC\_SAMPLES}}
+\index{ADC\_SAMPLES@{ADC\_SAMPLES}!analog.c@{analog.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_SAMPLES}{ADC\_SAMPLES}}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+SAMPLES~20  /$\ast$ numero di campioni per singolo canale $\ast$/}
+
+
+
+Definition at line 13 of file analog.\+c.
+
+\mbox{\Hypertarget{analog_8c_a7e7a958c1f37754d83aeb300a30a4b41}\label{analog_8c_a7e7a958c1f37754d83aeb300a30a4b41}} 
+\index{analog.c@{analog.c}!I\_OUT\_K@{I\_OUT\_K}}
+\index{I\_OUT\_K@{I\_OUT\_K}!analog.c@{analog.c}}
+\doxysubsubsection{\texorpdfstring{I\_OUT\_K}{I\_OUT\_K}}
+{\footnotesize\ttfamily \#define I\+\_\+\+OUT\+\_\+K~(float)16.\+5}
+
+
+
+Definition at line 24 of file analog.\+c.
+
+\mbox{\Hypertarget{analog_8c_ac91e954471045fdbd9b3d01933373c1e}\label{analog_8c_ac91e954471045fdbd9b3d01933373c1e}} 
+\index{analog.c@{analog.c}!K2C@{K2C}}
+\index{K2C@{K2C}!analog.c@{analog.c}}
+\doxysubsubsection{\texorpdfstring{K2C}{K2C}}
+{\footnotesize\ttfamily \#define K2C~(double)273.\+15}
+
+
+
+Definition at line 29 of file analog.\+c.
+
+\mbox{\Hypertarget{analog_8c_a6c6cd23c50d4bb7c41bac5454026bdae}\label{analog_8c_a6c6cd23c50d4bb7c41bac5454026bdae}} 
+\index{analog.c@{analog.c}!NUMBER\_OF\_ANALOG\_INPUTS@{NUMBER\_OF\_ANALOG\_INPUTS}}
+\index{NUMBER\_OF\_ANALOG\_INPUTS@{NUMBER\_OF\_ANALOG\_INPUTS}!analog.c@{analog.c}}
+\doxysubsubsection{\texorpdfstring{NUMBER\_OF\_ANALOG\_INPUTS}{NUMBER\_OF\_ANALOG\_INPUTS}}
+{\footnotesize\ttfamily \#define NUMBER\+\_\+\+OF\+\_\+\+ANALOG\+\_\+\+INPUTS~3}
+
+
+
+Definition at line 19 of file analog.\+c.
+
+\mbox{\Hypertarget{analog_8c_a8573afe95c21c513ecb619babc43a585}\label{analog_8c_a8573afe95c21c513ecb619babc43a585}} 
+\index{analog.c@{analog.c}!R\_VALUE@{R\_VALUE}}
+\index{R\_VALUE@{R\_VALUE}!analog.c@{analog.c}}
+\doxysubsubsection{\texorpdfstring{R\_VALUE}{R\_VALUE}}
+{\footnotesize\ttfamily \#define R\+\_\+\+VALUE~2200}
+
+
+
+Definition at line 25 of file analog.\+c.
+
+\mbox{\Hypertarget{analog_8c_a1a4ebeac22bba6b479c6d968e49ae884}\label{analog_8c_a1a4ebeac22bba6b479c6d968e49ae884}} 
+\index{analog.c@{analog.c}!RTD\_B@{RTD\_B}}
+\index{RTD\_B@{RTD\_B}!analog.c@{analog.c}}
+\doxysubsubsection{\texorpdfstring{RTD\_B}{RTD\_B}}
+{\footnotesize\ttfamily \#define RTD\+\_\+B~3988}
+
+
+
+Definition at line 26 of file analog.\+c.
+
+\mbox{\Hypertarget{analog_8c_a44377bac95544f0e9b9c28b1fa7ec229}\label{analog_8c_a44377bac95544f0e9b9c28b1fa7ec229}} 
+\index{analog.c@{analog.c}!RTD\_R\_R@{RTD\_R\_R}}
+\index{RTD\_R\_R@{RTD\_R\_R}!analog.c@{analog.c}}
+\doxysubsubsection{\texorpdfstring{RTD\_R\_R}{RTD\_R\_R}}
+{\footnotesize\ttfamily \#define RTD\+\_\+\+R\+\_\+R~10000}
+
+
+
+Definition at line 27 of file analog.\+c.
+
+\mbox{\Hypertarget{analog_8c_a5ff597b530e0bd471305a48681289ebc}\label{analog_8c_a5ff597b530e0bd471305a48681289ebc}} 
+\index{analog.c@{analog.c}!RTD\_T\_R@{RTD\_T\_R}}
+\index{RTD\_T\_R@{RTD\_T\_R}!analog.c@{analog.c}}
+\doxysubsubsection{\texorpdfstring{RTD\_T\_R}{RTD\_T\_R}}
+{\footnotesize\ttfamily \#define RTD\+\_\+\+T\+\_\+R~(double)298.\+15}
+
+
+
+Definition at line 28 of file analog.\+c.
+
+\mbox{\Hypertarget{analog_8c_a1ab5ad0c3149a4d7badde84786128aee}\label{analog_8c_a1ab5ad0c3149a4d7badde84786128aee}} 
+\index{analog.c@{analog.c}!VCC\_ADC@{VCC\_ADC}}
+\index{VCC\_ADC@{VCC\_ADC}!analog.c@{analog.c}}
+\doxysubsubsection{\texorpdfstring{VCC\_ADC}{VCC\_ADC}}
+{\footnotesize\ttfamily \#define VCC\+\_\+\+ADC~3300 /$\ast$ mV $\ast$/}
+
+
+
+Definition at line 22 of file analog.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{analog_8c_aff73cb1a0a6e4ace610aa6dcb6f517da}\label{analog_8c_aff73cb1a0a6e4ace610aa6dcb6f517da}} 
+\index{analog.c@{analog.c}!AnalogInit@{AnalogInit}}
+\index{AnalogInit@{AnalogInit}!analog.c@{analog.c}}
+\doxysubsubsection{\texorpdfstring{AnalogInit()}{AnalogInit()}}
+{\footnotesize\ttfamily void Analog\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 65 of file analog.\+c.
+
+\mbox{\Hypertarget{analog_8c_a2eda3bed473556e313e75c9522aeebb2}\label{analog_8c_a2eda3bed473556e313e75c9522aeebb2}} 
+\index{analog.c@{analog.c}!AnalogManager@{AnalogManager}}
+\index{AnalogManager@{AnalogManager}!analog.c@{analog.c}}
+\doxysubsubsection{\texorpdfstring{AnalogManager()}{AnalogManager()}}
+{\footnotesize\ttfamily void Analog\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmachine__status}{machine\+\_\+status}} $\ast$}]{machine }\end{DoxyParamCaption})}
+
+
+
+Definition at line 73 of file analog.\+c.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{analog_8c_a22b804736f5648d52f639b2647d4ed13}\label{analog_8c_a22b804736f5648d52f639b2647d4ed13}} 
+\index{analog.c@{analog.c}!hadc1@{hadc1}}
+\index{hadc1@{hadc1}!analog.c@{analog.c}}
+\doxysubsubsection{\texorpdfstring{hadc1}{hadc1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___a_d_c___exported___types_ga46483fcdb7a528252920c304ec59d006}{ADC\+\_\+\+Handle\+Type\+Def}} hadc1\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 45 of file main.\+c.
+

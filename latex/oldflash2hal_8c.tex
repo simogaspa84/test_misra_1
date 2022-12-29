@@ -1,0 +1,78 @@
+\hypertarget{oldflash2hal_8c}{}\doxysection{Src/oldflash2hal.c File Reference}
+\label{oldflash2hal_8c}\index{Src/oldflash2hal.c@{Src/oldflash2hal.c}}
+{\ttfamily \#include \char`\"{}stm32f1xx\+\_\+hal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}oldflash2hal.\+h\char`\"{}}\newline
+Include dependency graph for oldflash2hal.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oldflash2hal_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{oldflash2hal_8c_a4084d0184bab463a1579271bf474aaef}{FLASH\+\_\+\+Unlock}} (void)
+\item 
+void \mbox{\hyperlink{oldflash2hal_8c_a46899557353c4312ddbe3f25e65df1d8}{FLASH\+\_\+\+Lock}} (void)
+\item 
+\mbox{\hyperlink{oldflash2hal_8h_adc63a6f3404ff1f71229a66915e9cdc0}{FLASH\+\_\+\+Status}} \mbox{\hyperlink{oldflash2hal_8c_a13a2ca18bfb3d5fb827a2751799f8451}{FLASH\+\_\+\+Erase\+Page}} (uint32\+\_\+t Page\+\_\+\+Address)
+\item 
+\mbox{\hyperlink{oldflash2hal_8h_adc63a6f3404ff1f71229a66915e9cdc0}{FLASH\+\_\+\+Status}} \mbox{\hyperlink{oldflash2hal_8c_aac9a2f400b92537bd42a6bd7cc237b11}{FLASH\+\_\+\+Program\+Word}} (uint32\+\_\+t Address, uint32\+\_\+t Data)
+\item 
+\mbox{\hyperlink{oldflash2hal_8h_adc63a6f3404ff1f71229a66915e9cdc0}{FLASH\+\_\+\+Status}} \mbox{\hyperlink{oldflash2hal_8c_a5c1336f667950a8765887228f1d0d501}{FLASH\+\_\+\+Program\+Half\+Word}} (uint32\+\_\+t Address, uint16\+\_\+t Data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{oldflash2hal_8c_a13a2ca18bfb3d5fb827a2751799f8451}\label{oldflash2hal_8c_a13a2ca18bfb3d5fb827a2751799f8451}} 
+\index{oldflash2hal.c@{oldflash2hal.c}!FLASH\_ErasePage@{FLASH\_ErasePage}}
+\index{FLASH\_ErasePage@{FLASH\_ErasePage}!oldflash2hal.c@{oldflash2hal.c}}
+\doxysubsubsection{\texorpdfstring{FLASH\_ErasePage()}{FLASH\_ErasePage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{oldflash2hal_8h_adc63a6f3404ff1f71229a66915e9cdc0}{FLASH\+\_\+\+Status}} FLASH\+\_\+\+Erase\+Page (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Page\+\_\+\+Address }\end{DoxyParamCaption})}
+
+
+
+Definition at line 41 of file oldflash2hal.\+c.
+
+\mbox{\Hypertarget{oldflash2hal_8c_a46899557353c4312ddbe3f25e65df1d8}\label{oldflash2hal_8c_a46899557353c4312ddbe3f25e65df1d8}} 
+\index{oldflash2hal.c@{oldflash2hal.c}!FLASH\_Lock@{FLASH\_Lock}}
+\index{FLASH\_Lock@{FLASH\_Lock}!oldflash2hal.c@{oldflash2hal.c}}
+\doxysubsubsection{\texorpdfstring{FLASH\_Lock()}{FLASH\_Lock()}}
+{\footnotesize\ttfamily void FLASH\+\_\+\+Lock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 36 of file oldflash2hal.\+c.
+
+\mbox{\Hypertarget{oldflash2hal_8c_a5c1336f667950a8765887228f1d0d501}\label{oldflash2hal_8c_a5c1336f667950a8765887228f1d0d501}} 
+\index{oldflash2hal.c@{oldflash2hal.c}!FLASH\_ProgramHalfWord@{FLASH\_ProgramHalfWord}}
+\index{FLASH\_ProgramHalfWord@{FLASH\_ProgramHalfWord}!oldflash2hal.c@{oldflash2hal.c}}
+\doxysubsubsection{\texorpdfstring{FLASH\_ProgramHalfWord()}{FLASH\_ProgramHalfWord()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{oldflash2hal_8h_adc63a6f3404ff1f71229a66915e9cdc0}{FLASH\+\_\+\+Status}} FLASH\+\_\+\+Program\+Half\+Word (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Address,  }\item[{uint16\+\_\+t}]{Data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 66 of file oldflash2hal.\+c.
+
+\mbox{\Hypertarget{oldflash2hal_8c_aac9a2f400b92537bd42a6bd7cc237b11}\label{oldflash2hal_8c_aac9a2f400b92537bd42a6bd7cc237b11}} 
+\index{oldflash2hal.c@{oldflash2hal.c}!FLASH\_ProgramWord@{FLASH\_ProgramWord}}
+\index{FLASH\_ProgramWord@{FLASH\_ProgramWord}!oldflash2hal.c@{oldflash2hal.c}}
+\doxysubsubsection{\texorpdfstring{FLASH\_ProgramWord()}{FLASH\_ProgramWord()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{oldflash2hal_8h_adc63a6f3404ff1f71229a66915e9cdc0}{FLASH\+\_\+\+Status}} FLASH\+\_\+\+Program\+Word (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Address,  }\item[{uint32\+\_\+t}]{Data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 57 of file oldflash2hal.\+c.
+
+\mbox{\Hypertarget{oldflash2hal_8c_a4084d0184bab463a1579271bf474aaef}\label{oldflash2hal_8c_a4084d0184bab463a1579271bf474aaef}} 
+\index{oldflash2hal.c@{oldflash2hal.c}!FLASH\_Unlock@{FLASH\_Unlock}}
+\index{FLASH\_Unlock@{FLASH\_Unlock}!oldflash2hal.c@{oldflash2hal.c}}
+\doxysubsubsection{\texorpdfstring{FLASH\_Unlock()}{FLASH\_Unlock()}}
+{\footnotesize\ttfamily void FLASH\+\_\+\+Unlock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file oldflash2hal.\+c.
+

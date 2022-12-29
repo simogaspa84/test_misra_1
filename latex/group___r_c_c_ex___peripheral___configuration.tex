@@ -1,0 +1,72 @@
+\hypertarget{group___r_c_c_ex___peripheral___configuration}{}\doxysection{Peripheral Configuration}
+\label{group___r_c_c_ex___peripheral___configuration}\index{Peripheral Configuration@{Peripheral Configuration}}
+
+
+Macros to configure clock source of different peripherals.  
+
+
+Collaboration diagram for Peripheral Configuration\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_c_c_ex___peripheral___configuration}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___peripheral___configuration_ga4c75b81d1b7d65cda934c9f1350ea97b}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+ADC\+\_\+\+CONFIG}}(\+\_\+\+\_\+\+ADCCLKSOURCE\+\_\+\+\_\+)~                  \mbox{\hyperlink{group___exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\+\_\+\+REG}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/$>$CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga970436533d6ba9f1cb8ac840476093fb}{RCC\+\_\+\+CFGR\+\_\+\+ADCPRE}}, (uint32\+\_\+t)(\+\_\+\+\_\+\+ADCCLKSOURCE\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Macro to configure the ADCx clock (x=1 to 3 depending on devices). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___peripheral___configuration_ga2ee9f1838a8450f949b548a06ed3bc58}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+ADC\+\_\+\+SOURCE}}()~((uint32\+\_\+t)(\mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\+\_\+\+BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/$>$CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga970436533d6ba9f1cb8ac840476093fb}{RCC\+\_\+\+CFGR\+\_\+\+ADCPRE}})))
+\begin{DoxyCompactList}\small\item\em Macro to get the ADC clock (ADCx\+CLK, x=1 to 3 depending on devices). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Macros to configure clock source of different peripherals. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___r_c_c_ex___peripheral___configuration_ga4c75b81d1b7d65cda934c9f1350ea97b}\label{group___r_c_c_ex___peripheral___configuration_ga4c75b81d1b7d65cda934c9f1350ea97b}} 
+\index{Peripheral Configuration@{Peripheral Configuration}!\_\_HAL\_RCC\_ADC\_CONFIG@{\_\_HAL\_RCC\_ADC\_CONFIG}}
+\index{\_\_HAL\_RCC\_ADC\_CONFIG@{\_\_HAL\_RCC\_ADC\_CONFIG}!Peripheral Configuration@{Peripheral Configuration}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_ADC\_CONFIG}{\_\_HAL\_RCC\_ADC\_CONFIG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+ADC\+\_\+\+CONFIG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+ADCCLKSOURCE\+\_\+\+\_\+ }\end{DoxyParamCaption})~                  \mbox{\hyperlink{group___exported__macros_ga6553c99f510c3bab8cc0a91602053247}{MODIFY\+\_\+\+REG}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/$>$CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga970436533d6ba9f1cb8ac840476093fb}{RCC\+\_\+\+CFGR\+\_\+\+ADCPRE}}, (uint32\+\_\+t)(\+\_\+\+\_\+\+ADCCLKSOURCE\+\_\+\+\_\+))}
+
+
+
+Macro to configure the ADCx clock (x=1 to 3 depending on devices). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+ADCCLKSOURCE$<$/strong$>$} & specifies the ADC clock source. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c_ex___a_d_c___prescaler_gabf0c62e72916675e7a7fb4d1ff6daa17}{RCC\+\_\+\+ADCPCLK2\+\_\+\+DIV2}} PCLK2 clock divided by 2 selected as ADC clock \item \mbox{\hyperlink{group___r_c_c_ex___a_d_c___prescaler_ga8faad39ce8c436a2db1b0c26e27ee5c3}{RCC\+\_\+\+ADCPCLK2\+\_\+\+DIV4}} PCLK2 clock divided by 4 selected as ADC clock \item \mbox{\hyperlink{group___r_c_c_ex___a_d_c___prescaler_gac487ed2d7f4c9d67b72c847ae2a2e292}{RCC\+\_\+\+ADCPCLK2\+\_\+\+DIV6}} PCLK2 clock divided by 6 selected as ADC clock \item \mbox{\hyperlink{group___r_c_c_ex___a_d_c___prescaler_gaabcb60850e93dcba0a166361166eecaf}{RCC\+\_\+\+ADCPCLK2\+\_\+\+DIV8}} PCLK2 clock divided by 8 selected as ADC clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1721 of file stm32f1xx\+\_\+hal\+\_\+rcc\+\_\+ex.\+h.
+
+\mbox{\Hypertarget{group___r_c_c_ex___peripheral___configuration_ga2ee9f1838a8450f949b548a06ed3bc58}\label{group___r_c_c_ex___peripheral___configuration_ga2ee9f1838a8450f949b548a06ed3bc58}} 
+\index{Peripheral Configuration@{Peripheral Configuration}!\_\_HAL\_RCC\_GET\_ADC\_SOURCE@{\_\_HAL\_RCC\_GET\_ADC\_SOURCE}}
+\index{\_\_HAL\_RCC\_GET\_ADC\_SOURCE@{\_\_HAL\_RCC\_GET\_ADC\_SOURCE}!Peripheral Configuration@{Peripheral Configuration}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_GET\_ADC\_SOURCE}{\_\_HAL\_RCC\_GET\_ADC\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+ADC\+\_\+\+SOURCE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((uint32\+\_\+t)(\mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{READ\+\_\+\+BIT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{RCC}}-\/$>$CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga970436533d6ba9f1cb8ac840476093fb}{RCC\+\_\+\+CFGR\+\_\+\+ADCPRE}})))}
+
+
+
+Macro to get the ADC clock (ADCx\+CLK, x=1 to 3 depending on devices). 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & clock source can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c_ex___a_d_c___prescaler_gabf0c62e72916675e7a7fb4d1ff6daa17}{RCC\+\_\+\+ADCPCLK2\+\_\+\+DIV2}} PCLK2 clock divided by 2 selected as ADC clock \item \mbox{\hyperlink{group___r_c_c_ex___a_d_c___prescaler_ga8faad39ce8c436a2db1b0c26e27ee5c3}{RCC\+\_\+\+ADCPCLK2\+\_\+\+DIV4}} PCLK2 clock divided by 4 selected as ADC clock \item \mbox{\hyperlink{group___r_c_c_ex___a_d_c___prescaler_gac487ed2d7f4c9d67b72c847ae2a2e292}{RCC\+\_\+\+ADCPCLK2\+\_\+\+DIV6}} PCLK2 clock divided by 6 selected as ADC clock \item \mbox{\hyperlink{group___r_c_c_ex___a_d_c___prescaler_gaabcb60850e93dcba0a166361166eecaf}{RCC\+\_\+\+ADCPCLK2\+\_\+\+DIV8}} PCLK2 clock divided by 8 selected as ADC clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 1731 of file stm32f1xx\+\_\+hal\+\_\+rcc\+\_\+ex.\+h.
+

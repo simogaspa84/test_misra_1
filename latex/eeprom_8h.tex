@@ -1,0 +1,227 @@
+\hypertarget{eeprom_8h}{}\doxysection{Inc/eeprom.h File Reference}
+\label{eeprom_8h}\index{Inc/eeprom.h@{Inc/eeprom.h}}
+{\ttfamily \#include \char`\"{}stm32f1xx\+\_\+hal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}oldflash2hal.\+h\char`\"{}}\newline
+Include dependency graph for eeprom.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{eeprom_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{eeprom_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{eeprom_8h_a7d467c1d283fdfa1f2081ba1e0d01b6e}{PAGE\+\_\+\+SIZE}}~(0x800$\ast$\mbox{\hyperlink{oldflash2hal_8h_a31c9546c0ee84fba4e4970a02148ff41}{PAGE\+\_\+\+REAL\+\_\+\+NUM}})  /$\ast$ Page size = 2KByte x 2 $\ast$/
+\item 
+\#define \mbox{\hyperlink{eeprom_8h_a96932befbe81496318633eab6e623adb}{EEPROM\+\_\+\+START\+\_\+\+ADDRESS}}~((uint32\+\_\+t)0x0807\+E000)
+\item 
+\#define \mbox{\hyperlink{eeprom_8h_a062c18f12dc7f6d4b74597059a87aa36}{PAGE0\+\_\+\+BASE\+\_\+\+ADDRESS}}~((uint32\+\_\+t)(\mbox{\hyperlink{eeprom_8h_a96932befbe81496318633eab6e623adb}{EEPROM\+\_\+\+START\+\_\+\+ADDRESS}} + 0x000))
+\item 
+\#define \mbox{\hyperlink{eeprom_8h_a033d1b9c3ce59690ffcdef7c500857d8}{PAGE0\+\_\+\+END\+\_\+\+ADDRESS}}~((uint32\+\_\+t)(\mbox{\hyperlink{eeprom_8h_a96932befbe81496318633eab6e623adb}{EEPROM\+\_\+\+START\+\_\+\+ADDRESS}} + (\mbox{\hyperlink{eeprom_8h_a7d467c1d283fdfa1f2081ba1e0d01b6e}{PAGE\+\_\+\+SIZE}} -\/ 1)))
+\item 
+\#define \mbox{\hyperlink{eeprom_8h_a199f308fcbd4d6ec1adc01a23a1ab10e}{PAGE1\+\_\+\+BASE\+\_\+\+ADDRESS}}~((uint32\+\_\+t)(\mbox{\hyperlink{eeprom_8h_a96932befbe81496318633eab6e623adb}{EEPROM\+\_\+\+START\+\_\+\+ADDRESS}} + \mbox{\hyperlink{eeprom_8h_a7d467c1d283fdfa1f2081ba1e0d01b6e}{PAGE\+\_\+\+SIZE}}))
+\item 
+\#define \mbox{\hyperlink{eeprom_8h_a687a6117fcecbc1763f3ebcd903dd22e}{PAGE1\+\_\+\+END\+\_\+\+ADDRESS}}~((uint32\+\_\+t)(\mbox{\hyperlink{eeprom_8h_a96932befbe81496318633eab6e623adb}{EEPROM\+\_\+\+START\+\_\+\+ADDRESS}} + (2 $\ast$ \mbox{\hyperlink{eeprom_8h_a7d467c1d283fdfa1f2081ba1e0d01b6e}{PAGE\+\_\+\+SIZE}} -\/ 1)))
+\item 
+\#define \mbox{\hyperlink{eeprom_8h_a2a04f7bf0fe13871f7d1c220e4b78acf}{PAGE0}}~((uint16\+\_\+t)0x0000)
+\item 
+\#define \mbox{\hyperlink{eeprom_8h_a76461f9c28fe509ce976b40a489a57e4}{PAGE1}}~((uint16\+\_\+t)0x0001)
+\item 
+\#define \mbox{\hyperlink{eeprom_8h_a4df3477464bc078623a7f55e7bcd9be0}{NO\+\_\+\+VALID\+\_\+\+PAGE}}~((uint16\+\_\+t)0x00\+AB)
+\item 
+\#define \mbox{\hyperlink{eeprom_8h_ab34c8a09ba45ac4f5eca4545edb690d2}{ERASED}}~((uint16\+\_\+t)0x\+FFFF)     /$\ast$ PAGE is empty $\ast$/
+\item 
+\#define \mbox{\hyperlink{eeprom_8h_ab19a68e9d28176fa03de1520a2f412a1}{RECEIVE\+\_\+\+DATA}}~((uint16\+\_\+t)0x\+EEEE)     /$\ast$ PAGE is marked to receive data $\ast$/
+\item 
+\#define \mbox{\hyperlink{eeprom_8h_a7212a28cabb1d59cdad2ce997350911c}{VALID\+\_\+\+PAGE}}~((uint16\+\_\+t)0x0000)     /$\ast$ PAGE containing valid data $\ast$/
+\item 
+\#define \mbox{\hyperlink{eeprom_8h_a05987e5911ecd1a80bfbff03622d5bbc}{READ\+\_\+\+FROM\+\_\+\+VALID\+\_\+\+PAGE}}~((uint8\+\_\+t)0x00)
+\item 
+\#define \mbox{\hyperlink{eeprom_8h_abd6dfb57e2c1eb0d9091b46d1a33dd49}{WRITE\+\_\+\+IN\+\_\+\+VALID\+\_\+\+PAGE}}~((uint8\+\_\+t)0x01)
+\item 
+\#define \mbox{\hyperlink{eeprom_8h_ac62392d0ebdd165defbbc36f7262a385}{PAGE\+\_\+\+FULL}}~((uint8\+\_\+t)0x80)
+\item 
+\#define \mbox{\hyperlink{eeprom_8h_a2c2bc85c33ecc9b9d00af09fb4c52e66}{Numb\+Of\+Var}}~740
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{group___e_e_p_r_o_m___emulation_ga83834957567411c76bb7f659cf8a1a38}{EE\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Restore the pages to a known good state in case of page\textquotesingle{}s status corruption after a power loss. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___e_e_p_r_o_m___emulation_ga0776e2e16f54d3a675e4f2f401703a85}{EE\+\_\+\+Read\+Variable}} (uint16\+\_\+t Virt\+Address, uint16\+\_\+t $\ast$Data)
+\begin{DoxyCompactList}\small\item\em Returns the last stored variable data, if found, which correspond to the passed virtual address. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___e_e_p_r_o_m___emulation_ga516e9ced7438b9452c72884aa1df5915}{EE\+\_\+\+Write\+Variable}} (uint16\+\_\+t Virt\+Address, uint16\+\_\+t Data)
+\begin{DoxyCompactList}\small\item\em Writes/upadtes variable data in EEPROM. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{eeprom_8h_a96932befbe81496318633eab6e623adb}\label{eeprom_8h_a96932befbe81496318633eab6e623adb}} 
+\index{eeprom.h@{eeprom.h}!EEPROM\_START\_ADDRESS@{EEPROM\_START\_ADDRESS}}
+\index{EEPROM\_START\_ADDRESS@{EEPROM\_START\_ADDRESS}!eeprom.h@{eeprom.h}}
+\doxysubsubsection{\texorpdfstring{EEPROM\_START\_ADDRESS}{EEPROM\_START\_ADDRESS}}
+{\footnotesize\ttfamily \#define EEPROM\+\_\+\+START\+\_\+\+ADDRESS~((uint32\+\_\+t)0x0807\+E000)}
+
+
+
+Definition at line 36 of file eeprom.\+h.
+
+\mbox{\Hypertarget{eeprom_8h_ab34c8a09ba45ac4f5eca4545edb690d2}\label{eeprom_8h_ab34c8a09ba45ac4f5eca4545edb690d2}} 
+\index{eeprom.h@{eeprom.h}!ERASED@{ERASED}}
+\index{ERASED@{ERASED}!eeprom.h@{eeprom.h}}
+\doxysubsubsection{\texorpdfstring{ERASED}{ERASED}}
+{\footnotesize\ttfamily \#define ERASED~((uint16\+\_\+t)0x\+FFFF)     /$\ast$ PAGE is empty $\ast$/}
+
+
+
+Definition at line 53 of file eeprom.\+h.
+
+\mbox{\Hypertarget{eeprom_8h_a4df3477464bc078623a7f55e7bcd9be0}\label{eeprom_8h_a4df3477464bc078623a7f55e7bcd9be0}} 
+\index{eeprom.h@{eeprom.h}!NO\_VALID\_PAGE@{NO\_VALID\_PAGE}}
+\index{NO\_VALID\_PAGE@{NO\_VALID\_PAGE}!eeprom.h@{eeprom.h}}
+\doxysubsubsection{\texorpdfstring{NO\_VALID\_PAGE}{NO\_VALID\_PAGE}}
+{\footnotesize\ttfamily \#define NO\+\_\+\+VALID\+\_\+\+PAGE~((uint16\+\_\+t)0x00\+AB)}
+
+
+
+Definition at line 50 of file eeprom.\+h.
+
+\mbox{\Hypertarget{eeprom_8h_a2c2bc85c33ecc9b9d00af09fb4c52e66}\label{eeprom_8h_a2c2bc85c33ecc9b9d00af09fb4c52e66}} 
+\index{eeprom.h@{eeprom.h}!NumbOfVar@{NumbOfVar}}
+\index{NumbOfVar@{NumbOfVar}!eeprom.h@{eeprom.h}}
+\doxysubsubsection{\texorpdfstring{NumbOfVar}{NumbOfVar}}
+{\footnotesize\ttfamily \#define Numb\+Of\+Var~740}
+
+
+
+Definition at line 65 of file eeprom.\+h.
+
+\mbox{\Hypertarget{eeprom_8h_a2a04f7bf0fe13871f7d1c220e4b78acf}\label{eeprom_8h_a2a04f7bf0fe13871f7d1c220e4b78acf}} 
+\index{eeprom.h@{eeprom.h}!PAGE0@{PAGE0}}
+\index{PAGE0@{PAGE0}!eeprom.h@{eeprom.h}}
+\doxysubsubsection{\texorpdfstring{PAGE0}{PAGE0}}
+{\footnotesize\ttfamily \#define PAGE0~((uint16\+\_\+t)0x0000)}
+
+
+
+Definition at line 46 of file eeprom.\+h.
+
+\mbox{\Hypertarget{eeprom_8h_a062c18f12dc7f6d4b74597059a87aa36}\label{eeprom_8h_a062c18f12dc7f6d4b74597059a87aa36}} 
+\index{eeprom.h@{eeprom.h}!PAGE0\_BASE\_ADDRESS@{PAGE0\_BASE\_ADDRESS}}
+\index{PAGE0\_BASE\_ADDRESS@{PAGE0\_BASE\_ADDRESS}!eeprom.h@{eeprom.h}}
+\doxysubsubsection{\texorpdfstring{PAGE0\_BASE\_ADDRESS}{PAGE0\_BASE\_ADDRESS}}
+{\footnotesize\ttfamily \#define PAGE0\+\_\+\+BASE\+\_\+\+ADDRESS~((uint32\+\_\+t)(\mbox{\hyperlink{eeprom_8h_a96932befbe81496318633eab6e623adb}{EEPROM\+\_\+\+START\+\_\+\+ADDRESS}} + 0x000))}
+
+
+
+Definition at line 39 of file eeprom.\+h.
+
+\mbox{\Hypertarget{eeprom_8h_a033d1b9c3ce59690ffcdef7c500857d8}\label{eeprom_8h_a033d1b9c3ce59690ffcdef7c500857d8}} 
+\index{eeprom.h@{eeprom.h}!PAGE0\_END\_ADDRESS@{PAGE0\_END\_ADDRESS}}
+\index{PAGE0\_END\_ADDRESS@{PAGE0\_END\_ADDRESS}!eeprom.h@{eeprom.h}}
+\doxysubsubsection{\texorpdfstring{PAGE0\_END\_ADDRESS}{PAGE0\_END\_ADDRESS}}
+{\footnotesize\ttfamily \#define PAGE0\+\_\+\+END\+\_\+\+ADDRESS~((uint32\+\_\+t)(\mbox{\hyperlink{eeprom_8h_a96932befbe81496318633eab6e623adb}{EEPROM\+\_\+\+START\+\_\+\+ADDRESS}} + (\mbox{\hyperlink{eeprom_8h_a7d467c1d283fdfa1f2081ba1e0d01b6e}{PAGE\+\_\+\+SIZE}} -\/ 1)))}
+
+
+
+Definition at line 40 of file eeprom.\+h.
+
+\mbox{\Hypertarget{eeprom_8h_a76461f9c28fe509ce976b40a489a57e4}\label{eeprom_8h_a76461f9c28fe509ce976b40a489a57e4}} 
+\index{eeprom.h@{eeprom.h}!PAGE1@{PAGE1}}
+\index{PAGE1@{PAGE1}!eeprom.h@{eeprom.h}}
+\doxysubsubsection{\texorpdfstring{PAGE1}{PAGE1}}
+{\footnotesize\ttfamily \#define PAGE1~((uint16\+\_\+t)0x0001)}
+
+
+
+Definition at line 47 of file eeprom.\+h.
+
+\mbox{\Hypertarget{eeprom_8h_a199f308fcbd4d6ec1adc01a23a1ab10e}\label{eeprom_8h_a199f308fcbd4d6ec1adc01a23a1ab10e}} 
+\index{eeprom.h@{eeprom.h}!PAGE1\_BASE\_ADDRESS@{PAGE1\_BASE\_ADDRESS}}
+\index{PAGE1\_BASE\_ADDRESS@{PAGE1\_BASE\_ADDRESS}!eeprom.h@{eeprom.h}}
+\doxysubsubsection{\texorpdfstring{PAGE1\_BASE\_ADDRESS}{PAGE1\_BASE\_ADDRESS}}
+{\footnotesize\ttfamily \#define PAGE1\+\_\+\+BASE\+\_\+\+ADDRESS~((uint32\+\_\+t)(\mbox{\hyperlink{eeprom_8h_a96932befbe81496318633eab6e623adb}{EEPROM\+\_\+\+START\+\_\+\+ADDRESS}} + \mbox{\hyperlink{eeprom_8h_a7d467c1d283fdfa1f2081ba1e0d01b6e}{PAGE\+\_\+\+SIZE}}))}
+
+
+
+Definition at line 42 of file eeprom.\+h.
+
+\mbox{\Hypertarget{eeprom_8h_a687a6117fcecbc1763f3ebcd903dd22e}\label{eeprom_8h_a687a6117fcecbc1763f3ebcd903dd22e}} 
+\index{eeprom.h@{eeprom.h}!PAGE1\_END\_ADDRESS@{PAGE1\_END\_ADDRESS}}
+\index{PAGE1\_END\_ADDRESS@{PAGE1\_END\_ADDRESS}!eeprom.h@{eeprom.h}}
+\doxysubsubsection{\texorpdfstring{PAGE1\_END\_ADDRESS}{PAGE1\_END\_ADDRESS}}
+{\footnotesize\ttfamily \#define PAGE1\+\_\+\+END\+\_\+\+ADDRESS~((uint32\+\_\+t)(\mbox{\hyperlink{eeprom_8h_a96932befbe81496318633eab6e623adb}{EEPROM\+\_\+\+START\+\_\+\+ADDRESS}} + (2 $\ast$ \mbox{\hyperlink{eeprom_8h_a7d467c1d283fdfa1f2081ba1e0d01b6e}{PAGE\+\_\+\+SIZE}} -\/ 1)))}
+
+
+
+Definition at line 43 of file eeprom.\+h.
+
+\mbox{\Hypertarget{eeprom_8h_ac62392d0ebdd165defbbc36f7262a385}\label{eeprom_8h_ac62392d0ebdd165defbbc36f7262a385}} 
+\index{eeprom.h@{eeprom.h}!PAGE\_FULL@{PAGE\_FULL}}
+\index{PAGE\_FULL@{PAGE\_FULL}!eeprom.h@{eeprom.h}}
+\doxysubsubsection{\texorpdfstring{PAGE\_FULL}{PAGE\_FULL}}
+{\footnotesize\ttfamily \#define PAGE\+\_\+\+FULL~((uint8\+\_\+t)0x80)}
+
+
+
+Definition at line 62 of file eeprom.\+h.
+
+\mbox{\Hypertarget{eeprom_8h_a7d467c1d283fdfa1f2081ba1e0d01b6e}\label{eeprom_8h_a7d467c1d283fdfa1f2081ba1e0d01b6e}} 
+\index{eeprom.h@{eeprom.h}!PAGE\_SIZE@{PAGE\_SIZE}}
+\index{PAGE\_SIZE@{PAGE\_SIZE}!eeprom.h@{eeprom.h}}
+\doxysubsubsection{\texorpdfstring{PAGE\_SIZE}{PAGE\_SIZE}}
+{\footnotesize\ttfamily \#define PAGE\+\_\+\+SIZE~(0x800$\ast$\mbox{\hyperlink{oldflash2hal_8h_a31c9546c0ee84fba4e4970a02148ff41}{PAGE\+\_\+\+REAL\+\_\+\+NUM}})  /$\ast$ Page size = 2KByte x 2 $\ast$/}
+
+
+
+Definition at line 33 of file eeprom.\+h.
+
+\mbox{\Hypertarget{eeprom_8h_a05987e5911ecd1a80bfbff03622d5bbc}\label{eeprom_8h_a05987e5911ecd1a80bfbff03622d5bbc}} 
+\index{eeprom.h@{eeprom.h}!READ\_FROM\_VALID\_PAGE@{READ\_FROM\_VALID\_PAGE}}
+\index{READ\_FROM\_VALID\_PAGE@{READ\_FROM\_VALID\_PAGE}!eeprom.h@{eeprom.h}}
+\doxysubsubsection{\texorpdfstring{READ\_FROM\_VALID\_PAGE}{READ\_FROM\_VALID\_PAGE}}
+{\footnotesize\ttfamily \#define READ\+\_\+\+FROM\+\_\+\+VALID\+\_\+\+PAGE~((uint8\+\_\+t)0x00)}
+
+
+
+Definition at line 58 of file eeprom.\+h.
+
+\mbox{\Hypertarget{eeprom_8h_ab19a68e9d28176fa03de1520a2f412a1}\label{eeprom_8h_ab19a68e9d28176fa03de1520a2f412a1}} 
+\index{eeprom.h@{eeprom.h}!RECEIVE\_DATA@{RECEIVE\_DATA}}
+\index{RECEIVE\_DATA@{RECEIVE\_DATA}!eeprom.h@{eeprom.h}}
+\doxysubsubsection{\texorpdfstring{RECEIVE\_DATA}{RECEIVE\_DATA}}
+{\footnotesize\ttfamily \#define RECEIVE\+\_\+\+DATA~((uint16\+\_\+t)0x\+EEEE)     /$\ast$ PAGE is marked to receive data $\ast$/}
+
+
+
+Definition at line 54 of file eeprom.\+h.
+
+\mbox{\Hypertarget{eeprom_8h_a7212a28cabb1d59cdad2ce997350911c}\label{eeprom_8h_a7212a28cabb1d59cdad2ce997350911c}} 
+\index{eeprom.h@{eeprom.h}!VALID\_PAGE@{VALID\_PAGE}}
+\index{VALID\_PAGE@{VALID\_PAGE}!eeprom.h@{eeprom.h}}
+\doxysubsubsection{\texorpdfstring{VALID\_PAGE}{VALID\_PAGE}}
+{\footnotesize\ttfamily \#define VALID\+\_\+\+PAGE~((uint16\+\_\+t)0x0000)     /$\ast$ PAGE containing valid data $\ast$/}
+
+
+
+Definition at line 55 of file eeprom.\+h.
+
+\mbox{\Hypertarget{eeprom_8h_abd6dfb57e2c1eb0d9091b46d1a33dd49}\label{eeprom_8h_abd6dfb57e2c1eb0d9091b46d1a33dd49}} 
+\index{eeprom.h@{eeprom.h}!WRITE\_IN\_VALID\_PAGE@{WRITE\_IN\_VALID\_PAGE}}
+\index{WRITE\_IN\_VALID\_PAGE@{WRITE\_IN\_VALID\_PAGE}!eeprom.h@{eeprom.h}}
+\doxysubsubsection{\texorpdfstring{WRITE\_IN\_VALID\_PAGE}{WRITE\_IN\_VALID\_PAGE}}
+{\footnotesize\ttfamily \#define WRITE\+\_\+\+IN\+\_\+\+VALID\+\_\+\+PAGE~((uint8\+\_\+t)0x01)}
+
+
+
+Definition at line 59 of file eeprom.\+h.
+
